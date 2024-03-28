@@ -12,4 +12,9 @@ class ServiceController extends Controller
         $services = Services::latest()->get();
         return $services;
     }
+
+    public function AllService(){
+        $service = Services::all();
+        return view('backend.service.all_service', compact('service'));
+    }
 }

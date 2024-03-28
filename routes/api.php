@@ -29,7 +29,7 @@ Route::post('/contactsend',[ContactController::class, 'onContactSend']);
 //Course All Route
 Route::get('/coursehome',[CoursesController::class, 'onSelectFour']);
 Route::get('/courseall',[CoursesController::class, 'onSelectAll']);
-Route::post('/coursedetails',[CoursesController::class, 'onSelectDetails']);
+Route::get('/coursedetails/{courseID}',[CoursesController::class, 'onSelectDetails']);
 
 //Footer Route
 Route::get('/footerdata',[FooterController::class, 'onAllSelect']);
@@ -43,7 +43,7 @@ Route::get('/services',[ServiceController::class, 'ServiceView']);
 //Project Routes
 Route::get('/projecthome',[ProjectController::class, 'onSelectThree']);
 Route::get('/projectall',[ProjectController::class, 'onSelectAll']);
-Route::post('/projectdetails',[ProjectController::class, 'ProjectDetails']);
+Route::get('/projectdetails/{projectId}',[ProjectController::class, 'ProjectDetails']);
 
 //Home All Routes
 Route::get('/totalhome',[HomePageEtcController::class, 'SelectTotalHome']);
